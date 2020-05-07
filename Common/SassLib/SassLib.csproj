@@ -11,11 +11,27 @@
     <PackageReference Include="Excubo.Blazor.LazyStyleSheet" Version="2.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="16.5.0" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.5.0" />
   </ItemGroup>
-
 
   <ItemGroup>
-    <Folder Include="SassFiles\Abstracts\" />
+    <Folder Include="build\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="build\*.targets" PackagePath="build\" />
+  </ItemGroup>
+  <ItemGroup>
+    <CssFiles Include="wwwroot\**\*.scss" PackagePath="wwwroot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SassFiles\Base\_Colors.scss" />
+    <Content Include="SassFiles\Base\_Fonts.scss" />
+    <Content Include="SassFiles\Base\_Reset.scss" />
+    <Content Include="SassFiles\Base\_Texts.scss" />
+    <Content Include="SassFiles\Components\_ComponentBase1.scss" />
+    <Content Include="SassFiles\Fonts\Helvetica\HelveticaLTStd-Bold.otf" />
+    <Content Include="SassFiles\_SassLib.scss" />
+  </ItemGroup>  
 
 </Project>
